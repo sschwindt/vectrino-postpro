@@ -1,0 +1,190 @@
+fileName :                              \NortekData\HB.192.24.Vectrino Profiler.00001.ntk
+date :                                  2024-07-10 13:39:50.610 MESZ
+startCollectionTime_seconds (s) :       1720611590
+startCollectionTime_subseconds (s) :    0.6569999999999999
+endCollectionTime_seconds (s) :         1720611650
+endCollectionTime_subseconds (s) :      0.637
+nSets :                                 6387
+droppedSets :                           0
+swRevision :                            4428
+instrumentOffsetTime (s) :              1.7206115906367E9
+timeZoneOffset (s) :                    7200
+exportRevision :                        4428
+ins_runTime (ms) :                      60001
+ins_name :                              Vectrino Profiler
+ins_typeName :                          Doppler Velocimeter
+file_filenum :                          1
+file_prefix :                           HB
+file_directory :                        \NortekData
+file_endCondition :                     2
+file_endAction :                        0
+file_endTime (s) :                      60
+file_endSize (KB) :                     0
+file_endSets :                          0
+coordSystem :                           2
+calcSpeedOfSound :                      1
+syncType :                              0
+nTransducers :                          4
+nFrequencies :                          1
+calcPingInterval :                      3
+powerLevel :                            2
+internalBufferMemory (MB) :             52
+evrAlgorithm :                          0
+speedOfSound (m/s) :                    1490.5
+sampleRate (Hz) :                       100.0
+freq (kHz) [4] :                        [ 10000 0 0 0  ]
+amp (%) [4] :                           [ 100 0 0 0  ]
+pulseLength (0.1mm) [4] :               [ 40 0 0 0  ]
+blankingInterval (us) :                 61
+pingInterval (us) :                     101
+ensemblePingPairs :                     16
+cellSize (0.1mm) :                      40
+nCells :                                3
+cellStart (0.1mm) :                     460
+cellSizeSelected (mm) :                 4.00571870803833
+cellStartSelected (mm) :                46.0
+salinity (0.1ppt) :                     0
+velocityRange (mm/s) :                  500
+horizontalVelocityRange (mm/s) :        1463
+verticalVelocityRange (mm/s) :          379
+extendedPingInterval (us) :             0
+minCalibratedRange (0.1mm) :            400
+maxCalibratedRange (0.1mm) :            740
+rawSampleSeparation (us) :              606
+velocityExponent :                      -4
+bottom_supported :                      1
+bottom_enable :                         1
+bottom_rangeCompensateAmp :             0
+bottom_sampleRate (Hz) :                6.25
+bottom_minRange (mm) :                  40
+bottom_maxRange (mm) :                  250
+bottom_nCells :                         210
+bottom_cellSize (0.1mm) :               10
+bottom_cellSizeSelected (mm) :          1.0247187614440918
+bottom_minRangeSelected (mm) :          40.0
+bottom_maxRangeSelected (mm) :          255.19093322753906
+bottom_gainReductiondB (dB) :           10
+beam_supported :                        1
+beam_enable :                           1
+beam_rangeCompensateAmp :               0
+beam_sampleRate (Hz) :                  0.8928571343421936
+beam_minRange (mm) :                    30
+beam_maxRange (mm) :                    898
+beam_nCells :                           217
+beam_cellSize (0.1mm) :                 40
+beam_cellSizeSelected (mm) :            4.00571870803833
+beam_minRangeSelected (mm) :            30.0
+beam_maxRangeSelected (mm) :            899.240966796875
+beam_gainReductiondB (dB) :             0
+MainBoard_acSerialNo :                  VNO 1515
+MainBoard_hConfig :                     0
+MainBoard_hFrequency (kHz) :            10000
+MainBoard_hPICversion :                 1949
+MainBoard_hRecSize (64K Bytes) :        0
+MainBoard_cFWversion :                  Profiler
+MainBoard_cFWRepoVersion :              2779/1.32
+MainBoard_cFWdate :                     Feb 27 2015 12:31:07
+Probe_hFrequency (kHz) :                10000
+Probe_acSerialNo :                      VCN 9155
+Probe_hBeamToXYZ [16] :                 [ 8168 70 -8153 -75 -73 8126 72 -8126 2085 0 2146 0 9 2116 -9 2116  ]
+ProbeCalibration_probeType :            0
+ProbeCalibration_startRange (0.1mm) :   460
+ProbeCalibration_endRange (0.1mm) :     540
+ProbeCalibration_cellSize (0.1mm) :     40
+ProbeCalibration_nCells :               3
+ProbeCalibration_calibrationMatrix (XYZ Transformation matrix (per cell)) [3][16] :
+[ 1.98974609375 0.02734375 -1.98583984375 -0.029296875 -0.02880859375 1.960693359375 0.02880859375 -1.960693359375 0.509033203125 0.0 0.524169921875 0.0 0.003662109375 0.51708984375 -0.003662109375 0.51708984375  ]
+[ 1.978759765625 0.026123046875 -1.97509765625 -0.027099609375 -0.02685546875 1.962890625 0.02685546875 -1.962890625 0.509765625 0.0 0.5234375 0.0 0.00146484375 0.51708984375 -0.00146484375 0.51708984375  ]
+[ 1.9990234375 0.01220703125 -1.994873046875 -0.013427734375 -0.012939453125 1.98779296875 0.012939453125 -1.98779296875 0.5078125 0.0 0.52490234375 0.0 0.002197265625 0.5166015625 -0.002197265625 0.5166015625  ]
+
+
+
+          COMMENTS
+---------------------------------
+
+fileName                        Original filename
+date                            Date of collection
+startCollectionTime_seconds     Seconds since Jan 1, 1970 00:00:00 UTC
+startCollectionTime_subseconds  Fractional seconds
+endCollectionTime_seconds       Seconds since Jan 1, 1970 00:00:00 UTC
+endCollectionTime_subseconds    Fractional seconds
+nSets                           Total number of data records in this file
+droppedSets                     Number of data records dropped due to read errors
+swRevision                      Software revision
+instrumentOffsetTime            Offset from instrument time to platform time for MIDAS collected data
+timeZoneOffset                  Offset of platform local time from GMT
+ins_runTime                     Length of time data was collected
+ins_name                        Name of instrument
+ins_typeName                    Type of instrument
+file_filenum                    File extension number
+file_prefix                     Data file prefix
+file_directory                  Data file directory
+file_endCondition               File closed manually (0) or based on time(1), size(2) or number of records(4)
+file_endAction                  On completion, stop recording (0), create new file(1), close file(2), create new file with instrument restart(4)
+file_endTime                    Length of time that collection should run for
+file_endSize                    Size of data file to collect
+file_endSets                    Number of records to collect
+coordSystem                     0=Earth 1=XYZ 2=Beam 3=Phase
+calcSpeedOfSound                Speed of sound (0=fixed, 1=calculated)
+syncType                        0=None 1=On start 2=On measure 3=Master (Vectrino) 4=Master (Other)
+nTransducers                    Number of receive transducers in instrument
+nFrequencies                    Number of simultaneous frequencies transmitted
+calcPingInterval                1:Minimum 2:maximum 3:adaptive. Extended mode unwrap if bit 4=1, dual PRF otherwise
+powerLevel                      1:Low- 2:Low 3:High- 4:High
+internalBufferMemory            Internal memory available for buffering data
+evrAlgorithm                    Extended velocity range algorithm (0 - dualPRF 1 - MCPC)
+speedOfSound                    Speed of sound
+sampleRate                      Ensemble sample rate
+freq                            Transmit frequencies
+amp                             Amplitude of each pulse
+pulseLength                     Transmit pulse length
+pingInterval                    Time interval between pings
+ensemblePingPairs               Number of ping pairs to average together to produce a measurement
+cellSize                        Requested cell sample length
+nCells                          Number of cells to collect
+cellStart                       Range to first cell
+cellSizeSelected                Selected cell sample length
+cellStartSelected               Selected range to first cell
+velocityRange                   Velocity ranges from + to - this value
+extendedPingInterval            Extended velocity range ping interval (0 is disabled)
+minCalibratedRange              Minimum supported XYZ calibrated range
+maxCalibratedRange              Maximum supported XYZ calibrated range
+rawSampleSeparation             Separation time between ping pairs within an ensemble (first ping to first ping). 0 for continuous pinging.
+velocityExponent                Raw velocity exponent (-3 = mm/s, -4 = 0.1mm/s)
+bottom_supported                1 = Profiled bottom check / Dynamic adaptive check 2 = Bottom check / Static adaptive check
+bottom_enable                   1 = Check enabled
+bottom_rangeCompensateAmp       1 = Compensate for range dependent attenuation in amplitude
+bottom_sampleRate               Bottom check sample rate
+bottom_minRange                 Requested minimum range
+bottom_maxRange                 Requested maximum range
+bottom_nCells                   Number of cells to collect
+bottom_cellSize                 Requested cell sample length
+bottom_cellSizeSelected         Selected cell sample length
+bottom_minRangeSelected         Selected range to first cell
+bottom_maxRangeSelected         Selected range to last cell
+bottom_gainReductiondB          Amplifier gain reduction
+beam_supported                  1 = Profiled bottom check / Dynamic adaptive check 2 = Bottom check / Static adaptive check
+beam_enable                     1 = Check enabled
+beam_rangeCompensateAmp         1 = Compensate for range dependent attenuation in amplitude
+beam_sampleRate                 Bottom check sample rate
+beam_minRange                   Requested minimum range
+beam_maxRange                   Requested maximum range
+beam_nCells                     Number of cells to collect
+beam_cellSize                   Requested cell sample length
+beam_cellSizeSelected           Selected cell sample length
+beam_minRangeSelected           Selected range to first cell
+beam_maxRangeSelected           Selected range to last cell
+beam_gainReductiondB            Amplifier gain reduction
+MainBoard_hConfig               Board configuration: Bit 0 - Recorder installed  Bit 1 - Compass Installed Bit 2 - Compass Installed
+MainBoard_hFrequency            Board transmit frequency
+MainBoard_hPICversion           FPGA code version
+MainBoard_hRecSize              Internal Recorder Size
+MainBoard_cFWversion            Firmware Version
+MainBoard_cFWRepoVersion        Repository Revision
+MainBoard_cFWdate               Date firmware was built
+Probe_hFrequency                Transducer Frequency
+Probe_hBeamToXYZ                Beam to XYZ transformation matrix (scaled by 4096)
+ProbeCalibration_startRange     Start of calibrated range
+ProbeCalibration_endRange       End of calibrated range
+ProbeCalibration_cellSize       Sampling length per cell
+ProbeCalibration_nCells         Number of transform matrices (one per cell)
