@@ -1,0 +1,1 @@
+This folder contains codes that I used to test the netCDF output format. It could also work, but I abandoned it because the netCDFD format is less intuitive, as it cannot be displayed in a text editor for cross-checking. Anyone who disagrees is very much invited to make this code function :-)
