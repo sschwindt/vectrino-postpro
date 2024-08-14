@@ -1,4 +1,4 @@
 myst-parser
 numpy
 pandas
-sphinx-material
+sphinx-rtd-theme
