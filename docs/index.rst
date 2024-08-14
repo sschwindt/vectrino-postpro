@@ -16,7 +16,7 @@ To work with the code, download or clone it from `https://github.com/sschwindt/v
 Requirements
 ++++++++++++
 
-The code was developped and tested with Python 3.10. To get detailed installation instructions for Python, visit `https://hydro-informatics.com/python-basics/pyinstall.html <https://hydro-informatics.com/python-basics/pyinstall.html>`_ or use your preferred search engine/AI.
+The code was developped and tested with Python 3.10. To get detailed installation instructions for Python, visit `https://hydro-informatics.com/python-basics/pyinstall.html <https://hydro-informatics.com/python-basics/pyinstall.html>`_ or use your preferred search engine/AI. The following libraries are required:
 
 .. code::
 
