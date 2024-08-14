@@ -18,10 +18,6 @@ sphinx:
   configuration: docs/conf.py
   fail_on_warning: false
 
-extensions = [
-    'myst_parser'
-]
-
 source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
