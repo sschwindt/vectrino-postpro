@@ -23,7 +23,7 @@ def is_development_build():
 
 
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('.\.'))
+sys.path.insert(0, os.path.abspath('..'))
 
 
 # the following modules will be mocked (i.e. bogus imports - required for C-dependent packages)
@@ -41,7 +41,9 @@ copyright = author
 language = "en"
 
 extensions = [
-    'myst_parser'
+    'myst_parser', 
+    'sphinx.ext.autodoc',  # enables autodoc
+    'sphinx.ext.napoleon', # enables Google and NumPy style docstrings
 ]
 
 source_suffix = {
