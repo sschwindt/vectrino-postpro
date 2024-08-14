@@ -52,6 +52,16 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+# Autodoc settings
+autoclass_content = 'both'  # Include both class docstring and __init__ docstring
+autodoc_default_options = {
+    'members': True,                # Include documented members (functions, classes)
+    'undoc-members': True,          # Include undocumented members
+    'inherited-members': True,      # Include members inherited from base classes
+    'show-inheritance': True,       # Show base classes in class documentation
+    'module-docstring': True,       # Ensure module-level docstrings are included
+}
+
 templates_path = ["_templates"]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
