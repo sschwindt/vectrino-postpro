@@ -41,18 +41,6 @@ language = "en"
 
 extensions = [
     "sphinx.ext.intersphinx",
-    "sphinx_copybutton",
-    "sphinx_togglebutton",
-    # "sphinxcontrib.bibtex",
-    "sphinx.ext.autodoc",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.napoleon",
-    "sphinx.ext.githubpages",
-    "sphinx.ext.todo",
-    # "sphinxcontrib.googleanalytics",
-    "IPython.sphinxext.ipython_console_highlighting",
-    "IPython.sphinxext.ipython_directive",
     "myst_parser",
 ]
 
@@ -67,7 +55,7 @@ suppress_warnings = ["image.nonlocal_uri"]
 pygments_style = "sphinx"
 
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/3.9", None),
+    "python": ("https://docs.python.org/3.11", None),
     "rtd": ("https://docs.readthedocs.io/en/latest/", None),
     "sphinx": ("http://www.sphinx-doc.org/en/stable/", None),
 }
