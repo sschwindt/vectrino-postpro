@@ -49,7 +49,7 @@ def read_ascii_file(file_name):
                 beam_number = int(line.split('Profiles_SNR_Beam_')[1].split()[0])
                 # Extract the velocities for the current beam
                 snr = line.split(':')[-1].strip().strip('[]').split()
-                current_snr[beam_number] = [float(sig) for sig in snr]
+                current_snr[beam_number] = np.nanmean([float(sig) for sig in snr])
 
             # append relevant data to the lists
             if len(current_velocities) == 4:
@@ -80,19 +80,8 @@ def read_ascii_file(file_name):
         'Velocity Beam 2 (m/s)': velocity_beam_2,
         'Velocity Beam 3 (m/s)': velocity_beam_3,
         'Velocity Beam 4 (m/s)': velocity_beam_4,
-        'SNR Beam 1 (dB)': velocity_beam_1,
-        'SNR Beam 2 (dB)': velocity_beam_2,
-        'SNR Beam 3 (dB)': velocity_beam_3,
-        'SNR Beam 4 (dB)': velocity_beam_4,
+        'SNR Beam 1 (dB)': snr_beam_1,
+        'SNR Beam 2 (dB)': snr_beam_2,
+        'SNR Beam 3 (dB)': snr_beam_3,
+        'SNR Beam 4 (dB)': snr_beam_4,
     })
-
-
-# print(df.head())
-# print(df.describe())
-# df.to_csv('velocity_profile_data.csv', index=False)
-
-
-# Display the DataFrame to the user
-# import ace_tools as tools;
-
- #tools.display_dataframe_to_user(name="Velocity Profile Data", dataframe=df)
