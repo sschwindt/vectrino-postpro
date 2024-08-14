@@ -41,7 +41,7 @@ language = "en"
 
 extensions = [
     "sphinx.ext.intersphinx",
-    "myst_parser",
+    # "myst_parser",
 ]
 
 templates_path = ["_templates"]
