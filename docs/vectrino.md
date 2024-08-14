@@ -1,3 +1,5 @@
+## Vectrino background
+
 The Vectrino II is an acoustic Doppler velocimeter (ADV) for measuring three-dimensional water velocity profiles. It uses multiple acoustic beams to measure the Doppler shift, from which it calculates velocity components. The Vectrino II typically has four beams, oriented in different directions. Each beam measures flow velocity along the line of sight of each beam, referred to as the beam velocities. In this context, **Beam 1 to Beam 4** are the raw velocities measured along the direction of each beam, which are not aligned with the standard Cartesian coordinate system `(x, y, z)` and require conversion.
 
 ### Conversion to Cartesian coordinates
@@ -6,7 +8,7 @@ To obtain the actual velocity field in the standard Cartesian coordinate system 
 
 The general form of the transformation from beam coordinates to Cartesian coordinates is:
 
-\[
+$$
 \begin{pmatrix}
 u \\
 v \\
@@ -21,7 +23,7 @@ B2 \\
 B3 \\
 B4
 \end{pmatrix}
-\]
+$$
 
 where **\( u, v, w \)** are the Cartesian velocity components (in the x, y, z directions); **\( q \)** is an error (quality) metric; and **\( \mathbf{M} \)** is the transformation matrix.
 

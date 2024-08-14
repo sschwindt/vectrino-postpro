@@ -1,3 +1,4 @@
 myst-parser
 numpy
 pandas
+sphinx-material

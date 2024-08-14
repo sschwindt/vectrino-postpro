@@ -47,6 +47,7 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
 }
+
 templates_path = ["_templates"]
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -75,13 +76,25 @@ myst_deflist_enable = True
 myst_url_schemes = ("http", "https", "mailto")
 panels_add_bootstrap_css = False
 
+html_theme = 'sphinx_material'
 html_theme_options = {
     "theme_dev_mode": True,
     "repository_url": "https://github.com/sschwindt/vectrino-postpro",
     "repository_branch": "main",
     "use_edit_page_button": False,
     "use_repository_button": True,
+    'base_url': 'http://sschwindt.github.io/vectrino-postpro/',
+    'repo_url': 'https://github.com/sschwindt/vectrino-postpro',
+    'repo_name': 'Vectrino ASCII Postpro',
+    'html_minify': True,
+    'css_minify': True,
+    'nav_title': 'Vectrino ASCII Postpro',
+    'logo_icon': 'img/icon.ico',
+    'globaltoc_depth': 2
+    "touch_icon": 'img/icon.ico',
+    "color_primary": "light-blue"
 }
+
 
 html_context = {
     "date": datetime.date.today().strftime("%Y-%m-%d"),
