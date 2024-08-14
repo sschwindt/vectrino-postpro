@@ -72,7 +72,6 @@ myst_deflist_enable = True
 myst_url_schemes = ("http", "https", "mailto")
 panels_add_bootstrap_css = False
 
-html_theme = "sphinx_book_theme"
 html_theme_options = {
     "theme_dev_mode": True,
     "repository_url": "https://github.com/sschwindt/vectrino-postpro",
