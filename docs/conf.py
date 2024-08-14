@@ -44,6 +44,7 @@ extensions = [
     'myst_parser', 
     'sphinx.ext.autodoc',  # enables autodoc
     'sphinx.ext.napoleon', # enables Google and NumPy style docstrings
+    'sphinx.ext.mathjax',  # enable tex math
 ]
 
 source_suffix = {
@@ -92,8 +93,9 @@ html_theme_options = {
     'html_minify': True,
     'css_minify': True,
     'nav_title': 'Vectrino ASCII Postpro',
-    'logo_icon': 'img/icon.ico',
-    'globaltoc_depth': 2,
+    'globaltoc_depth': 3,
+    'globaltoc_collapse': False,
+    'globaltoc_includehidden': False,
     "touch_icon": 'img/icon.ico',
     "color_primary": "light-blue"
 }
@@ -107,6 +109,11 @@ html_context = {
     "github_version": "main/",
     "conf_py_path": "/docs/"
 }
+
+myst_enable_extensions = [
+    "amsmath",  # LaTeX math environments
+]
+
 
 if not ("READTHEDOCS" in os.environ):
     html_static_path = ["_static/"]
