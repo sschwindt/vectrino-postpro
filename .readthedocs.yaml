@@ -33,3 +33,13 @@ sphinx:
 python:
    install:
      - requirements: docs/requirements.txt
+
+extensions = [
+    'myst_parser'
+]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+
