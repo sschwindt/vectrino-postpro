@@ -16,7 +16,7 @@ Transformation
 Get ASCII data
 ~~~~~~~~~~~~~~
 
-.. automodule:: get_ascii_data
+.. automodule:: .get_ascii_data
     :members:
 
 

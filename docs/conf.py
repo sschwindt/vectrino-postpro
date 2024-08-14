@@ -23,6 +23,7 @@ def is_development_build():
 
 
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('.\.'))
 
 
 # the following modules will be mocked (i.e. bogus imports - required for C-dependent packages)
@@ -90,7 +91,7 @@ html_theme_options = {
     'css_minify': True,
     'nav_title': 'Vectrino ASCII Postpro',
     'logo_icon': 'img/icon.ico',
-    'globaltoc_depth': 2
+    'globaltoc_depth': 2,
     "touch_icon": 'img/icon.ico',
     "color_primary": "light-blue"
 }
