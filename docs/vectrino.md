@@ -8,7 +8,7 @@ To obtain the actual velocity field in the standard Cartesian coordinate system 
 
 The general form of the transformation from beam coordinates to Cartesian coordinates is:
 
-\[
+$$
 \begin{pmatrix}
 u \\
 v \\
@@ -23,7 +23,7 @@ B2 \\
 B3 \\
 B4
 \end{pmatrix}
-\]
+$$
 
 where **\( u, v, w \)** are the Cartesian velocity components (in the x, y, z directions); **\( q \)** is an error (quality) metric; and **\( \mathbf{M} \)** is the transformation matrix.
 
