@@ -18,6 +18,8 @@ Get ASCII data
 
 .. automodule:: get_ascii_data
     :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 Prostprocessing Head (Example)
@@ -25,4 +27,6 @@ Prostprocessing Head (Example)
 
 .. automodule:: vectrino_ascii_postpro
     :members:
+    :undoc-members:
+    :show-inheritance:
 
