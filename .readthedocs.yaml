@@ -60,7 +60,3 @@ search:
      # ignore all files in the docs/ directory
      - docs/*
 
-# Enable submodules
-submodules:
-  include: all
-
