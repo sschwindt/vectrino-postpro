@@ -8,14 +8,15 @@ To obtain the actual velocity field in the standard Cartesian coordinate system 
 
 The general form of the transformation from beam coordinates to Cartesian coordinates is:
 
-$$
+
+\begin{align}
 \begin{pmatrix}
 u \\
 v \\
 w \\
 q
 \end{pmatrix}
-=
+&=
 \mathbf{M}
 \begin{pmatrix}
 B1 \\
@@ -23,9 +24,10 @@ B2 \\
 B3 \\
 B4
 \end{pmatrix}
-$$
+\end{align}
 
-where **\( u, v, w \)** are the Cartesian velocity components (in the x, y, z directions); **\( q \)** is an error (quality) metric; and **\( \mathbf{M} \)** is the transformation matrix.
+
+where **u, v, w** are the Cartesian velocity components (in the x, y, z directions); **q** is an error (quality) metric; and **M** is the transformation matrix.
 
 In the Vectrino II header files (e.g., `Vectrino-Profiler.00010.ntk.dat`), this information is accessible in the `Probe_hBeamToXYZ` variable. In addition, the descriptions of this variable (e.g., `Probe_hBeamToXYZ Beam to XYZ transformation matrix (scaled by 4096)`) provide the `scale_factor`, which is necessary to derive the transformation matrix from `Probe_hBeamToXYZ`. In this package, the transformation matrix is calculated based on this information as follows, assuming an exemplary value for `hBeamToXYZ`. Note that this value is automatically inferred from the `.ntk.hdr` file in the `get_transformation.get_transformation_matrix(<header_file_name>)` function.
 
