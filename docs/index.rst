@@ -53,7 +53,7 @@ The code outputs a CSV file containing the time series data from the Vectrino Pr
 | Velocity Beam 2 (m/s) | List of velocity measurements (m/s)    |
 |                       | along Beam 2.                          |
 +-----------------------+----------------------------------------+
-| Velocity Beam 3 (m/s)  | List of velocity measurements (m/s)   |
+| Velocity Beam 3 (m/s) | List of velocity measurements (m/s)    |
 |                       | along Beam 3.                          |
 +-----------------------+----------------------------------------+
 | Velocity Beam 4 (m/s) | List of velocity measurements (m/s)    |
