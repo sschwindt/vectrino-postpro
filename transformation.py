@@ -34,7 +34,11 @@ def get_transformation_matrix(ntk_file_name, scaling_factor=4096):
         return -1
 
 
-def apply_transformation(df, transformation_matrix):
+def apply_transformation(
+        df,
+        transformation_matrix,
+        relevant_point_ids=(0, 1, 2),
+):
     """Apply a transformation matrix to a pandas DataFrame containing Vectrino II ASCII data.
 
     :param pd.DataFrame df: This DataFrame must have the following column headers with lists of floats:
@@ -42,13 +46,23 @@ def apply_transformation(df, transformation_matrix):
                             The DataFrame can be created with get_ascii_data.read_ascii_file(file_name).
     :param np.array(4x4) transformation_matrix: Provide the transformation matrix calculated with the
                             get_transformation_matrix(file_name) function.
+    :param tuple relevant_point_ids: Specify a tuple of relevant point IDs from each measurement time step. The default
+                        is (0,1,2) and  forces the function to use point IDs 0, 1, and 2. Note that counting starts at 0
+                        and using more IDs or IDs beyond the number of measured points will cause an error that will
+                        stop the script.
     :return pd.DataFrame: Returns the input DataFrame with 3d u, v, and w flow velocity components appended.
     """
-    print('   - applying transformation')
+    if len(relevant_point_ids) == 0:
+        raise ValueError('ERROR: Invalid argument for list relevant_point_ids provided.')
+
+    points_per_measurement = len(df.loc[0, 'Velocity Beam 1 (m/s)'])
+    print('   - found ' + str(points_per_measurement) + ' points per measurement')
+    print('   - applying transformation...')
     # initiate Cartesian velocity vectors as lists
     u = []
     v = []
-    w = []
+    w1 = []
+    w2 = []
 
     for i in range(len(df)):
         # read beam velocities
@@ -60,10 +74,11 @@ def apply_transformation(df, transformation_matrix):
         # initialize lists to collect the three u, v, w values for each measurement
         u_values = []
         v_values = []
-        w_values = []
+        w1_values = []
+        w2_values = []
 
         # loop over the three values in each list
-        for j in range(3):
+        for j in range(points_per_measurement):
             beam_velocities = np.array([
                 beam_velocities_1[j],
                 beam_velocities_2[j],
@@ -71,22 +86,29 @@ def apply_transformation(df, transformation_matrix):
                 beam_velocities_4[j]
             ])
 
-            # calculate the Cartesian velocities using only the first 3 rows of M, which correspond to u, v, w
-            cartesian_velocities = np.dot(transformation_matrix[:3, :], beam_velocities)
+            # calculate the Cartesian velocities using only the first 3 rows of M, which correspond to u, v, w1
+            cartesian_velocities = np.dot(transformation_matrix[:4, :], beam_velocities)
+
+            # print(beam_velocities)
+            # print('------------------')
 
             # append the scalar values to the temporary lists
             u_values.append(cartesian_velocities[0])
             v_values.append(cartesian_velocities[1])
-            w_values.append(cartesian_velocities[2])
+            w1_values.append(cartesian_velocities[2])
+            w2_values.append(cartesian_velocities[3])
 
         # Compute the average for u, v, w for this row
-        u.append(np.mean(u_values))
-        v.append(np.mean(v_values))
-        w.append(np.mean(w_values))
+        u.append(np.mean([u_values[i] for i in relevant_point_ids]))
+        v.append(np.mean([v_values[i] for i in relevant_point_ids]))
+        w1.append(np.mean([w1_values[i] for i in relevant_point_ids]))
+        w2.append(np.mean([w2_values[i] for i in relevant_point_ids]))
+
 
     # add Cartesian velocities to the DataFrame
     df['u (m/s)'] = u
     df['v (m/s)'] = v
-    df['w (m/s)'] = w
+    df['w1 (m/s)'] = w1
+    df['w2 (m/s)'] = w2
 
     return df
