@@ -71,7 +71,9 @@ The code outputs a CSV file containing the time series data from the Vectrino Pr
 +-----------------------+----------------------------------------+
 | v (m/s)               | Flow velocity component in the y-axis. |
 +-----------------------+----------------------------------------+
-| w (m/s)               | Flow velocity component in the z-axis. |
+| w1 (m/s)              | Flow velocity component in the z-axis. |
++-----------------------+----------------------------------------+
+| w2 (m/s)              | Redundant measurement of w1.           |
 +-----------------------+----------------------------------------+
 
 Each row represents a snapshot of the measured velocities from the four beams at a given time. The velocities for each beam are logged as arrays. The SNR values provide information about the reliability of the velocity measurements, with higher SNR values indicating better signal quality relative to the background noise. The SNR is typically measured in decibels (dB) and the signal quality can be considered as follows (caution, this is only a suggestion):
