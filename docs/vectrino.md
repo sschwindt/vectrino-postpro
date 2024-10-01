@@ -13,8 +13,8 @@ The general form of the transformation from beam coordinates to Cartesian coordi
 \begin{pmatrix}
 u \\
 v \\
-w \\
-q
+w1 \\
+w2
 \end{pmatrix}
 &=
 \mathbf{M}
@@ -27,7 +27,7 @@ B4
 \end{align}
 
 
-where **u, v, w** are the Cartesian velocity components (in the x, y, z directions); **q** is an error (quality) metric; and **M** is the transformation matrix.
+where **u, v, w1, and w2** are the Cartesian velocity components (in the x, y, z directions), *w1* and *w2* are independent and redundant measurements of the vertical velocity (z-direction). **M** is the transformation matrix. 
 
 In the Vectrino II header files (e.g., `Vectrino-Profiler.00010.ntk.dat`), this information is accessible in the `Probe_hBeamToXYZ` variable. In addition, the descriptions of this variable (e.g., `Probe_hBeamToXYZ Beam to XYZ transformation matrix (scaled by 4096)`) provide the `scale_factor`, which is necessary to derive the transformation matrix from `Probe_hBeamToXYZ`. In this package, the transformation matrix is calculated based on this information as follows, assuming an exemplary value for `hBeamToXYZ`. Note that this value is automatically inferred from the `.ntk.hdr` file in the `get_transformation.get_transformation_matrix(<header_file_name>)` function.
 
@@ -73,7 +73,8 @@ for i in range(len(df)):
     cartesian_velocities = np.dot(M, beam_velocities)
     u.append(cartesian_velocities[0])
     v.append(cartesian_velocities[1])
-    w.append(cartesian_velocities[2])
+    w1.append(cartesian_velocities[2])
+    w2.append(cartesian_velocities[3])
 
 ```
 
